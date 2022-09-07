@@ -265,7 +265,7 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
       tags$head(tags$style(HTML(".content { padding-top: 2px;}"))),
       tags$script(src = "fileInput_text.js"),
       useShinyjs(),
-      #shinyDashboardThemes(theme = "grey_light"),
+      shinyDashboardThemes(theme = "grey_light"),
       uiOutput("themes"),
       tabItems(
         ##### HOME ####
