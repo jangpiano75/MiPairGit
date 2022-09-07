@@ -278,7 +278,7 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
                     br(), 
                     HOME_COMMENT6, 
                     selectInput("selectTheme", strong("Select Theme", style = "font-size:14pt"), 
-                                c("Choose one" = "", "Flat Red", "Gray Dark", "Gray Light (Default)",
+                                c("Choose one" = "", "Flat Red", "Gray Dark", "Gray Light",
                                   "Onenote", "Poor Mans Flatly", "Purple Gradient")))),
         
         ##### DATA INPUT ####
@@ -611,7 +611,7 @@ server = function(input, output, session) {
         shinyDashboardThemes(
           theme = "grey_dark"
         )
-      } else if (input$selectTheme =="Gray Light (Default)") {
+      } else if (input$selectTheme =="Gray Light") {
         shinyDashboardThemes(
           theme = "grey_light"
         )
