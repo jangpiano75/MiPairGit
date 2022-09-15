@@ -8,7 +8,7 @@ Date: 2022-08-19
 
 Maintainer: Hyo Jung Jang <hyojung.jang@stonybrook.edu>
 
-Description: MiPair is an integrative web cloud service for design-based comparative analysis with paired microbiome data. Pairing (or blocking) is a design technique that is widely used in comparative microbiome studies to efficiently control for the effects of potential confounders (e.g., genetic, environmental, or behavioral factors). Some typical paired (block) designs for human microbiome studies are repeated measures designs that profile each subjectâ€™s microbiome twice (or more than twice) 1) for pre and post treatments to see the effects of a treatment on microbiome, or 2) for different organs of the body (e.g., gut, mouse, skin) to see the disparity in microbiome between (or across) organs. MiCloud-P enables comprehensive comparative analysis in sequence for such paired microbiome studies on user-friendly web environments. Detailed features are as follows.
+Description: MiPair is an integrative web cloud service for design-based comparative analysis with paired microbiome data. Pairing (or blocking) is a design technique that is widely used in comparative microbiome studies to efficiently control for the effects of potential confounders (e.g., genetic, environmental, or behavioral factors). Some typical paired (block) designs for human microbiome studies are repeated measures designs that profile each subjectâ€™s microbiome twice (or more than twice) 1) for pre and post treatments to see the effects of a treatment on microbiome, or 2) for different organs of the body (e.g., gut, mouse, skin) to see the disparity in microbiome between (or across) organs. MiPair enables comprehensive comparative analysis in sequence for such paired microbiome studies on user-friendly web environments. Detailed features are as follows.
 
 * A variety of data uploading, quality controlling, analytic and graphical procedures that produce publishable data, tables, and plots
 * Comparative analysis between (or across) groups
@@ -24,7 +24,7 @@ Depends: R(>= 3.5), 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 
 ## URLs
 
 * Web application (online implementation): http://223.194.200.100:3838
-* GitHub repository (local implementation): https://github.com/yj7599/MiCloudPGit
+* GitHub repository (local implementation): https://github.com/yj7599/MiPairGit
 
 ## References
 
