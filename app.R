@@ -61,15 +61,15 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
 
 # COMMENTS
 {      
-  TITLE = p("MiCloud-P: An Integrative Web Cloud Service for Design-based Comparative Analysis with Paired Microbiome Data", style = "font-size:18pt")
-  HOME_COMMENT = p(strong("MiCloud-P", style = "font-size:15pt"), "is an integrative web cloud service for design-based comparative analysis with paired microbiome data. Pairing (or blocking) is a design technique that is widely used in comparative microbiome studies to efficiently control for the effects of potential confounders (e.g., genetic, environmental, or behavioral factors). Some typical paired (block) designs for human  microbiome  studies  are  repeated  measures  designs  that  profile  each  subject's microbiome twice (or more than twice) 1) for pre and post treatments to see the effects of a treatment on microbiome, or 2) for different organs of the body (e.g., gut, mouse, skin) to see the disparity in microbiome between (or across) organs. MiCloud-P enables comprehensive comparative analysis in sequence for such paired microbiome studies on user-friendly web environments. Detailed features are as follows.", style = "font-size:13pt")
+  TITLE = p("MiPair: An Integrative Web Cloud Service for Design-based Comparative Analysis with Paired Microbiome Data", style = "font-size:18pt")
+  HOME_COMMENT = p(strong("MiPair", style = "font-size:15pt"), "is an integrative web cloud service for design-based comparative analysis with paired microbiome data. Pairing (or blocking) is a design technique that is widely used in comparative microbiome studies to efficiently control for the effects of potential confounders (e.g., genetic, environmental, or behavioral factors). Some typical paired (block) designs for human  microbiome  studies  are  repeated  measures  designs  that  profile  each  subject's microbiome twice (or more than twice) 1) for pre and post treatments to see the effects of a treatment on microbiome, or 2) for different organs of the body (e.g., gut, mouse, skin) to see the disparity in microbiome between (or across) organs. MiPair enables comprehensive comparative analysis in sequence for such paired microbiome studies on user-friendly web environments. Detailed features are as follows.", style = "font-size:13pt")
   
   HOME_COMMENT1 = ("A variety of data uploading, quality controlling, analytic and graphical procedures that produce publishable data, tables, and plots")
   HOME_COMMENT2 = ("Comparative analysis between(or across) groups")
   HOME_COMMENT3 = ("Comparative analysis between baseline (or reference) and other groups")
   HOME_COMMENT4 = ("Parametric or non-parametric tests for incomplete or complete block designs")
   HOME_COMMENT5 = ("Both ecological (alpha-and beta-diversity) and taxonomic (e.g., phylum, class, order, family, genus, species) analysis")
-  HOME_COMMENT6 = p("Reference: Jang HJ, Koh H, Gu W, Kang B. MiCloud-P: An integrative web cloud service for design-based comparative analysis with paired microbiome data (in review).", style = "font-size:13pt")
+  HOME_COMMENT6 = p("Reference: Jang HJ, Koh H, Gu W, Kang B. MiPair: An integrative web cloud service for design-based comparative analysis with paired microbiome data (in review).", style = "font-size:13pt")
   
   INPUT_PHYLOSEQ_COMMENT1 = p("Description:", br(), br(), "This should be an '.Rdata' or '.rds' file, and the data should be in 'phyloseq' format (see ", 
                               a(tags$u("https://bioconductor.org/packages/release/bioc/html/phyloseq.html"), style = "color:red3"),
@@ -84,11 +84,11 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
                               "3) The metadata/sample information should contain variables for the subjects about host phenotypes, medical interventions, 
                               disease status or environmental/behavioral factors, where rows are subjects and columns are variables 
                               (row names are subject IDs, and column names are variable names).", br(), 
-                              "4) The phylogenetic tree should be a rooted tree. Otherwise, MiCloud automatically roots the tree through midpoint rooting (phangorn::midpoint). 
+                              "4) The phylogenetic tree should be a rooted tree. Otherwise, MiPair automatically roots the tree through midpoint rooting (phangorn::midpoint). 
                               The tip labels of the phylogenetic tree are feature IDs.", br(), br(), 
                               "* The features should be matched and identical across feature table, taxonomic table and phylogenetic tree. 
                               The subjects should be matched and identical between feature table and metadata/sample information. 
-                              MiCloud will analyze only the matched features and subjects."
+                              MiPair will analyze only the matched features and subjects."
                               , style = "font-size:11pt")
   
   INPUT_PHYLOSEQ_COMMENT2 = p("You can download three example  data  sets(Zhang  et  al., 2018), ‘Pairs.Rdata', ‘CBD.3Groups.Rdata', and ‘IBD.3Groups.Rdata', for",  br(),
@@ -155,11 +155,11 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
                                     "3) The metadata/sample information (.txt or .csv) should contain variables for the subjects about host phenotypes, medical interventions, 
                                     disease status or environmental/behavioral factors, where rows are subjects and columns are variables (row names are subject IDs, and 
                                     column names are variable names).", br(), 
-                                    "4) The phylogenetic tree (.tre or .nwk) should be a rooted tree. Otherwise, MiCloud automatically roots the tree through midpoint 
+                                    "4) The phylogenetic tree (.tre or .nwk) should be a rooted tree. Otherwise, MiPair automatically roots the tree through midpoint 
                                     rooting (phangorn::midpoint). The tip labels of the phylogenetic tree are feature IDs.", br(), br(), 
                                     "* The features should be matched and identical across feature table, taxonomic table and phylogenetic tree. 
                                     The subjects should be matched and identical between feature table and metadata/sample information. 
-                                    MiCloud will analyze only the matched features and subjects.", style = "font-size:11pt")
+                                    MiPair will analyze only the matched features and subjects.", style = "font-size:11pt")
   INPUT_INDIVIDUAL_DATA_COMMENT2 = p("You can download example microbiome data 'biom.zip'. This zip file contains four necessary data, feature table (otu.tab.txt), 
                                      taxonomic table (tax.tab.txt), metadata/sample information (sam.dat.txt), and phylogenetic tree (tree.tre).", br(), br(),
                                      "> setwd('/yourdatadirectory/')", br(), br(), 
@@ -214,7 +214,7 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
 {
   ui = dashboardPage(
     skin = "yellow",
-    title = "MiCloud",
+    title = "MiPair",
     dashboardHeader(title = span(TITLE, style = "float:left;font-size: 20px"), titleWidth = "100%"),
     dashboardSidebar(
       
@@ -273,7 +273,7 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
                     tags$ol(
                       tags$li(HOME_COMMENT1), tags$li(HOME_COMMENT2), tags$li(HOME_COMMENT3), tags$li(HOME_COMMENT4), tags$li(HOME_COMMENT5),
                       style = "font-size:13pt"), 
-                    div(tags$img(src="micloud_p_workflow_3.png", height = 900, weight = 500), style =  "text-align: center;"),
+                    div(tags$img(src="mipair_workflow.png", height = 900, weight = 500), style =  "text-align: center;"),
                     br(), 
                     HOME_COMMENT6, 
                     )),
@@ -1072,7 +1072,7 @@ server = function(input, output, session) {
         output$morePrimvar_opt <- renderUI({
           tagList(
             h4(strong("Rename Categories?", style = "color:black")),
-            p("You can rename categories of the primary variable. MiCloud-P keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
+            p("You can rename categories of the primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
             textInput("alphaCat1", label = (paste0("Reference: ", alpha.categos$cat1)), value = alpha.categos$cat1, width = '80%'),
             textInput("alphaCat2", label = (paste0("Comparison: ", alpha.categos$cat2)), value = alpha.categos$cat2, width = '80%'))
         }) 
@@ -1114,7 +1114,7 @@ server = function(input, output, session) {
             output$morePrimvar_opt <- renderUI({
               tagList(
                 h4(strong("Rename Categories?", style = "color:black")),
-                p("You can rename groups/levels of the chosen primary variable. MiCloud-P keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
+                p("You can rename groups/levels of the chosen primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
                 try(textInput("alphaCat1", label = (paste0("Reference: ", categos_alpha[1])), value = categos_alpha[1], width = '80%'), silent = TRUE),
                 try(textInput("alphaCat2", label = (paste0("Comparison: ", categos_alpha[2])), value = categos_alpha[2], width = '80%'), silent = TRUE))
             }) 
@@ -1137,7 +1137,7 @@ server = function(input, output, session) {
             output$morePrimvar_opt <- renderUI({
               tagList(
                 h4(strong("Rename Categories?", style = "color:black")),
-                p("You can rename groups/levels of the chosen primary variable. MiCloud-P keeps up to 8 characters on graphs.", style = "font-size:10pt"),
+                p("You can rename groups/levels of the chosen primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"),
                 lapply(1:prim_length_alpha, function(i){
                   textInput(paste0("alphaCat_", i), label = (paste0("Group/Level ", i, ": ", alpha.categos[i])), value = alpha.categos[i], width = '80%')
                 }))
@@ -1239,7 +1239,7 @@ server = function(input, output, session) {
       output$beta_morePrimvar <- renderUI({
         tagList(
           h4(strong("Rename Categories?", style = "color:black")),
-          p("You  can  rename  groups/levels  of  the  chosen  primary  variable.  MiCloud-P  keeps  up  to  8 characters on graphs.", style = "font-size:10pt"), 
+          p("You  can  rename  groups/levels  of  the  chosen  primary  variable.  MiPair  keeps  up  to  8 characters on graphs.", style = "font-size:10pt"), 
           textInput("betaCat1", label = (paste0("Reference: ", beta.categos$cat1)), value = beta.categos$cat1, width = '80%'),
           textInput("betaCat2", label = (paste0("Comparison: ", beta.categos$cat2)), value = beta.categos$cat2, width = '80%'))
       }) 
@@ -1285,7 +1285,7 @@ server = function(input, output, session) {
           output$beta_morePrimvar <- renderUI({
             tagList(
               h4(strong("Rename Categories?", style = "color:black")),
-              p("You can rename groups/levels of the chosen primary variable. MiCloud-P keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
+              p("You can rename groups/levels of the chosen primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"), 
               textInput("betaCat1", label = (paste0("Reference: ", categos_beta[1])), value = categos_beta[1], width = '80%'),
               textInput("betaCat2", label = (paste0("Comparison: ", categos_beta[2])), value = categos_beta[2], width = '80%'))
           }) 
@@ -1309,7 +1309,7 @@ server = function(input, output, session) {
           output$beta_morePrimvar <- renderUI({
             tagList(
               h4(strong("Rename Categories?", style = "color:black")),
-              p("You  can  rename  groups/levels  of  the  chosen  primary  variable.  MiCloud-P  keeps  up  to  8 characters on graphs.", style = "font-size:10pt"),
+              p("You  can  rename  groups/levels  of  the  chosen  primary  variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"),
               lapply(1:prim_length_beta, function(i){
                 textInput(paste0("betaCat_", i), label = (paste0("Group/Level ", i, ": ", beta.categos[i])), value = beta.categos[i], width = '80%')
               }))
@@ -1405,7 +1405,7 @@ server = function(input, output, session) {
         output$morePrimvar_opt_taxa <- renderUI({
           tagList(
             h4(strong("Rename Categories?", style = "color:black")),
-            p("You can rename categories of the primary variable. MiCloud-P keeps up to 8 characters on graphs.", style = "font-size:10pt"),
+            p("You can rename categories of the primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"),
             textInput("taxaCat1", label = (paste0("Reference: ",taxa.categos$cat1)), value = taxa.categos$cat1, width = '80%'),
             textInput("taxaCat2", label = (paste0("Comparison: ",taxa.categos$cat2)), value = taxa.categos$cat2, width = '80%'))
         })
@@ -1476,7 +1476,7 @@ server = function(input, output, session) {
         output$morePrimvar_opt_taxa <- renderUI({
           tagList(
             h4(strong("Rename Categories?", style = "color:black")),
-            p("You can rename  groups/levels  of  the  chosen  primary  variable.  MiCloud-P  keeps  up  to  8 characters on graphs.", style = "font-size:10pt"),
+            p("You can rename groups/levels of the chosen primary  variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"),
             textInput("taxaCat1", label = (paste0("Reference: ",taxa.categos$cat1)), value = taxa.categos$cat1, width = '80%'),
             textInput("taxaCat2", label = (paste0("Comparison: ",taxa.categos$cat2)), value = taxa.categos$cat2, width = '80%'))
         })
@@ -1533,7 +1533,7 @@ server = function(input, output, session) {
         output$morePrimvar_opt_taxa<- renderUI({
           tagList(
             h4(strong("Rename Categories?", style = "color:black")),
-            p("You  can  rename  groups/levels  of  the  chosen  primary  variable.  MiCloud-P  keeps  up  to  8 characters on graphs.", style = "font-size:10pt"),
+            p("You can rename groups/levels of the chosen primary variable. MiPair keeps up to 8 characters on graphs.", style = "font-size:10pt"),
             lapply(1:prim_length, function(i){
               textInput(paste0("mult_taxaCat", i), label = (paste0("Group/Level ", i, ": ", taxa.categos_mult[i])), value = taxa.categos_mult[i], width = '80%')
             }))
