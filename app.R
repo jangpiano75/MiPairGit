@@ -265,7 +265,6 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
       tags$head(tags$style(HTML(".content { padding-top: 2px;}"))),
       tags$script(src = "fileInput_text.js"),
       useShinyjs(),
-      #shinyDashboardThemes(theme = "grey_light"),
       uiOutput("themes"),
       tabItems(
         ##### HOME ####
@@ -277,9 +276,7 @@ source("Source/MiDataProc.Taxa.Paired.Mult.R")
                     div(tags$img(src="micloud_p_workflow_3.png", height = 900, weight = 500), style =  "text-align: center;"),
                     br(), 
                     HOME_COMMENT6, 
-                    selectInput("selectTheme", strong("Select Theme", style = "font-size:14pt"), 
-                                c("Choose one" = "", "Flat Red", "Gray Dark", "Gray Light",
-                                  "Onenote", "Poor Mans Flatly", "Purple Gradient")))),
+                    )),
         
         ##### DATA INPUT ####
         tabItem(tabName = "step1", br(),
@@ -600,36 +597,7 @@ server = function(input, output, session) {
   
   rcol = reactiveValues(selected = "lightblue") 
   
-  ## options to change theme ####
-  observeEvent(input$selectTheme, {
-    output$themes <- renderUI({
-      if (input$selectTheme == "Flat Red") {
-        shinyDashboardThemes(
-          theme = "flat_red"
-        )
-      } else if (input$selectTheme == "Gray Dark") {
-        shinyDashboardThemes(
-          theme = "grey_dark"
-        )
-      } else if (input$selectTheme =="Gray Light") {
-        shinyDashboardThemes(
-          theme = "grey_light"
-        )
-      } else if (input$selectTheme =="Onenote") {
-        shinyDashboardThemes(
-          theme = "onenote"
-        )
-      } else if (input$selectTheme == "Poor Mans Flatly") {
-        shinyDashboardThemes(
-          theme = "poor_mans_flatly"
-        )
-      } else if (input$selectTheme == "Purple Gradient") {
-        shinyDashboardThemes(
-          theme = "purple_gradient"
-        )
-      }
-    })
-  }, ignoreInit = TRUE)
+
   ## options to input ####
   observeEvent(input$inputOption,{
     observe({
