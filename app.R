@@ -20,6 +20,8 @@ if(!require('Rfast')) remotes::install_version('Rfast', version = '2.0.6')
 if(!require('LDM')) install.packages("Package/LDM_5.0.tar.gz", repos = NULL, type = "source")
 if(!require('volcano3Ddata')) remotes::install_github("KatrionaGoldmann/volcano3Ddata")
 if(!require('volcano3D')) remotes::install_github("KatrionaGoldmann/volcano3D")
+if(!require('matrixTests')) remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL)
+
 
 library(seqinr)
 library(shiny)
