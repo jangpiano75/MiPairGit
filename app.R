@@ -1,7 +1,7 @@
 rm(list = ls())
 
 #bslib 추가 
-list.of.packages <- c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'bslib', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable', 
+list.of.packages <- c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'bslib', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 
                       'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'dplyr', 'forestplot', 'quantreg', 'zCompositions', 'fossil', 'picante', 'BiasedUrn', 
                       'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'robCompositions', 'CompQuadForm', 'GUniFrac', 'ecodist', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr',
                       'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'MiRKAT')
@@ -33,7 +33,6 @@ library(shinyWidgets)
 library(MiRKAT)
 library(shinyjs)
 library(googleVis)
-library(xtable)
 library(DT)
 library(htmltools)
 library(biomformat)
