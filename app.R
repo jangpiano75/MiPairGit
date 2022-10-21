@@ -3,7 +3,7 @@ rm(list = ls())
 #bslib 추가 
 list.of.packages <- c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'bslib', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable', 
                       'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'dplyr', 'forestplot', 'quantreg', 'zCompositions', 'fossil', 'picante', 'BiasedUrn', 
-                      'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'robCompositions', 'GUniFrac', 'ecodist', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr',
+                      'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'robCompositions', 'CompQuadForm', 'GUniFrac', 'ecodist', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr',
                       'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'MiRKAT')
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -46,6 +46,7 @@ library(PMCMRplus)
 library(vegan)
 library(LDM)  
 library(lme4)
+library(CompQuadForm) 
 library(GUniFrac)
 #library(DESeq2)
 library(volcano3Ddata)
