@@ -20,7 +20,7 @@ remotes::install_github('hk1785/GLMM-MiRKAT')
 remotes::install_github('nyiuab/NBZIMM')
 remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL)
 
-install.packages('https://cran.rstudio.com/bin/macosx/contrib/4.1/Rfast_2.0.6.tgz', repos = NULL)
+#install.packages('https://cran.rstudio.com/bin/macosx/contrib/4.1/Rfast_2.0.6.tgz', repos = NULL)
 install.packages(c('gridGraphics', 'compositions'), repos = 'https://cloud.r-project.org/')
 install.packages(c('rgl', 'vegan3d', 'pca3d', 'jpeg', 'splitTools', 'survival', 'survminer', 'coin'), repos = 'https://cloud.r-project.org/')
 install.packages(c('randomForestSRC', 'kableExtra', 'caret', 'randomForest', 'glmnet'), repos = 'https://cloud.r-project.org/')
