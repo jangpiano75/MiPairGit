@@ -13,6 +13,8 @@ install.packages('robCompositions', repos='https://cloud.r-project.org/')
 BiocManager::install('BiocParallel')
 BiocManager::install('RcppGSL')
 
+install.packages('/Package/LDM_5.0.tar.gz', repos=NULL, type = 'source')
+install.packages('/Package/volcano3D_2.0.0.tar.gz', repos=NULL, type = 'source', dependencies = TRUE)
 #RUN R -e "remotes::install_github('KatrionaGoldmann/volcano3D', force = TRUE)"
 remotes::install_github('joey711/phyloseq')
 remotes::install_github('joey711/biomformat')
