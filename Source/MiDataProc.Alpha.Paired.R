@@ -15,6 +15,43 @@ library(lmerTest)
 #library(geepack)
 library(ICSNP)
 
+
+###################
+# Individual Data #
+###################
+
+biom.check.samples <- function(otu.table, sample.data) {
+  otu.tab <- otu_table(otu.table, taxa_are_rows = TRUE)
+  sam.dat <- sample_data(sample.data)
+  
+  ind.otu.sam <- is.element(dim(otu.tab), nrow(sam.dat))
+  
+  if (sum(ind.otu.sam) == 1 & ind.otu.sam[1]) {
+    otu.tab <- t(otu.tab)
+  }
+  
+  if (length(intersect(colnames(otu.tab), rownames(sam.dat))) == 0) {
+    return(TRUE)
+  } else {
+    return(FALSE)
+  }
+}
+
+
+biom.check.otu <- function(otu.table, tax.table, tre.data) {
+  otu.tab <- otu_table(otu.table, taxa_are_rows = TRUE)
+  tax.tab <- tax_table(tax.table)
+  tree <- phy_tree(tre.data)
+  
+  if (length(intersect(intersect(rownames(otu.tab), tree$tip.label), rownames(tax.tab))) == 0) {
+    return(TRUE)
+  }
+  else {
+    return(FALSE)
+  }
+}
+
+
 #####################
 # Data Manipulation #
 #####################
