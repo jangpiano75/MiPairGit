@@ -83,8 +83,8 @@ library(caret)
 #library(RcppZiggurat)
 #library(Rfast)
 
-install.packages('/root/Package/LDM_5.0.tar.gz', repos=NULL, type = 'source')
-install.packages('/root/Package/volcano3D_2.0.0.tar.gz', repos=NULL, type = 'source', dependencies = TRUE)
+install.packages('/Package/LDM_5.0.tar.gz', repos=NULL, type = 'source')
+install.packages('/Package/volcano3D_2.0.0.tar.gz', repos=NULL, type = 'source', dependencies = TRUE)
 
 library(LDM)
 library(volcano3D)
