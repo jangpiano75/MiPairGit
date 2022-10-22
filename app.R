@@ -17,7 +17,7 @@ remotes::install_github('joey711/phyloseq')
 remotes::install_github('joey711/biomformat')
 #remotes::install_github('hk1785/-MiRKAT')
 remotes::install_github('nyiuab/NBZIMM')
-remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL)
+remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL, force = TRUE)
 
 #RUN R -e "install.packages('https://cran.rstudio.com/bin/macosx/contrib/4.1/Rfast_2.0.6.tgz', repos = NULL)
 #RUN R -e "remotes::install_version('RcppGSL', version = '0.3.11')
