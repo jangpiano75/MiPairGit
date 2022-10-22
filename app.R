@@ -21,8 +21,8 @@ remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', rep
 
 #RUN R -e "install.packages('https://cran.rstudio.com/bin/macosx/contrib/4.1/Rfast_2.0.6.tgz', repos = NULL)
 #RUN R -e "remotes::install_version('RcppGSL', version = '0.3.11')
-remotes::install_version('RcppZiggurat', version = '0.1.6')
-remotes::install_version('Rfast', version = '2.0.6')
+#remotes::install_version('RcppZiggurat', version = '0.1.6')
+#remotes::install_version('Rfast', version = '2.0.6')
 
 library(shiny)
 library(rmarkdown) 
@@ -80,8 +80,8 @@ library(survminer)
 library(coin)
 library(kableExtra)
 library(caret)
-library(RcppZiggurat)
-library(Rfast)
+#library(RcppZiggurat)
+#library(Rfast)
 
 install.packages('/root/Package/LDM_5.0.tar.gz', repos=NULL, type = 'source')
 install.packages('/root/Package/volcano3D_2.0.0.tar.gz', repos=NULL, type = 'source', dependencies = TRUE)
