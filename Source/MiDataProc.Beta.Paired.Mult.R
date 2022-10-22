@@ -1,5 +1,3 @@
-library(phyloseq)
-
 #########################################################
 # Comparative analysis for multi-paired beta diversity  #
 #########################################################
