@@ -20,6 +20,7 @@ remotes::install_github('nyiuab/NBZIMM', repos = NULL, force = TRUE )
 remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL, force = TRUE)
 
 install.packages("RcppZiggurat")
+install.packages("mgcv", type = "binary")
 install.packages("fBasics", type = "binary") 
 install.packages("Rfast") 
 
