@@ -18,7 +18,7 @@ BiocManager::install('RcppGSL')
 #remotes::install_github('KatrionaGoldmann/volcano3D', force = TRUE)
 remotes::install_github('joey711/phyloseq')
 remotes::install_github('joey711/biomformat')
-remotes::install_github('hk1785/GLMM-MiRKAT')
+#remotes::install_github('hk1785/GLMM-MiRKAT')
 remotes::install_github('nyiuab/NBZIMM')
 remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL)
 
