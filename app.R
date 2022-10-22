@@ -9,7 +9,9 @@ install.packages(c('CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra',
 install.packages(c('devtools', 'betareg', 'remotes'), repos='https://cloud.r-project.org/')
 install.packages(c('ICSNP', 'BiocManager', 'PMCMRplus', 'vegan'), repos='https://cloud.r-project.org/')
 install.packages('robCompositions', repos='https://cloud.r-project.org/')
-  
+ 
+library(devtools)
+
 BiocManager::install('BiocParallel')
 BiocManager::install('RcppGSL')
 
