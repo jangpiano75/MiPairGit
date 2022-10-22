@@ -10,16 +10,9 @@ library(picante)
 library(entropart)
 library(lme4)
 library(lmerTest)
-#library(dirmult) 
-#library(robustbase)
 library(robCompositions) 
-#library(BiasedUrn)
-#library(CompQuadForm)
 library(GUniFrac) 
 library(ecodist) 
-#library(MiRKAT)
-#library(GLMMMiRKAT)
-#library(proxy)
 
 #####################
 # Data manipulation #
