@@ -1,15 +1,12 @@
 rm(list = ls())
 
-install.packages(c('shiny', 'rmarkdown'), repos='https://cloud.r-project.org/')
+install.packages(c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable',
+                  'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
+                  'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'BiasedUrn', 'CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'erer', 'DiagrammeR', 'stringr',
+                  'devtools', 'betareg', 'remotes', 'ICSNP', 'BiocManager', 'PMCMRplus', 'vegan', 'robCompositions', 'gridGraphics', 'compositions',
+                  'rgl', 'vegan3d', 'pca3d', 'jpeg', 'splitTools', 'survival', 'survminer', 'coin',
+                  'kableExtra', 'caret'), repos='https://cloud.r-project.org/')
 
-install.packages(c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable'), repos='https://cloud.r-project.org/')
-install.packages(c('DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante' ), repos='https://cloud.r-project.org/')
-install.packages(c('entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'BiasedUrn'), repos='https://cloud.r-project.org/')
-install.packages(c('CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'erer', 'DiagrammeR', 'stringr'), repos='https://cloud.r-project.org/')
-install.packages(c('devtools', 'betareg', 'remotes'), repos='https://cloud.r-project.org/')
-install.packages(c('ICSNP', 'BiocManager', 'PMCMRplus', 'vegan'), repos='https://cloud.r-project.org/')
-install.packages('robCompositions', repos='https://cloud.r-project.org/')
- 
 library(devtools)
 
 BiocManager::install('BiocParallel')
@@ -23,9 +20,6 @@ remotes::install_github('nyiuab/NBZIMM')
 remotes::install_github('https://github.com/karoliskoncevicius/matrixTests', repos = NULL)
 
 #RUN R -e "install.packages('https://cran.rstudio.com/bin/macosx/contrib/4.1/Rfast_2.0.6.tgz', repos = NULL)
-install.packages(c('gridGraphics', 'compositions'), repos = 'https://cloud.r-project.org/')
-install.packages(c('rgl', 'vegan3d', 'pca3d', 'jpeg', 'splitTools', 'survival', 'survminer', 'coin'), repos = 'https://cloud.r-project.org/')
-install.packages(c('kableExtra', 'caret'), repos = 'https://cloud.r-project.org/')
 #RUN R -e "remotes::install_version('RcppGSL', version = '0.3.11')
 remotes::install_version('RcppZiggurat', version = '0.1.6')
 remotes::install_version('Rfast', version = '2.0.6')
