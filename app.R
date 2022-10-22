@@ -10,7 +10,7 @@ install.packages(c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboardt
 library(devtools)
 
 BiocManager::install('BiocParallel')
-BiocManager::install('RcppGSL')
+BiocManager::install('RcppGSL', force = TRUE)
 
 #remotes::install_github('KatrionaGoldmann/volcano3D', force = TRUE)
 remotes::install_github('joey711/phyloseq')
