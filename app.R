@@ -9,8 +9,7 @@ install.packages(c('CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra',
 install.packages(c('devtools', 'betareg', 'remotes'), repos='https://cloud.r-project.org/')
 install.packages(c('ICSNP', 'BiocManager', 'PMCMRplus', 'vegan'), repos='https://cloud.r-project.org/')
 install.packages('robCompositions', repos='https://cloud.r-project.org/')
-
-        
+  
 BiocManager::install('BiocParallel')
 BiocManager::install('RcppGSL')
 
@@ -28,7 +27,6 @@ install.packages(c('kableExtra', 'caret'), repos = 'https://cloud.r-project.org/
 #RUN R -e "remotes::install_version('RcppGSL', version = '0.3.11')
 remotes::install_version('RcppZiggurat', version = '0.1.6')
 remotes::install_version('Rfast', version = '2.0.6')
-
 
 library(shiny)
 library(rmarkdown) 
