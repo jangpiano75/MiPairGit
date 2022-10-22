@@ -2,7 +2,7 @@ rm(list = ls())
 
 install.packages(c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable',
                   'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
-                  'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'BiasedUrn', 'CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'erer', 'DiagrammeR', 'stringr',
+                  'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'BiasedUrn', 'CompQuadForm', 'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'erer', 'stringr',
                   'devtools', 'betareg', 'remotes', 'ICSNP', 'BiocManager', 'PMCMRplus', 'vegan', 'robCompositions', 'gridGraphics', 'compositions',
                   'rgl', 'vegan3d', 'pca3d', 'jpeg', 'splitTools', 'survival', 'survminer', 'coin',
                   'kableExtra', 'caret'), repos='https://cloud.r-project.org/')
