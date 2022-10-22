@@ -18,10 +18,10 @@ Description: MiPair is an integrative web cloud service for design-based compara
 
 NeedsCompilation: No
 
-Depends: R(>= 4.1.0), 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'bslib', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis',                       'xtable', 'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'dplyr', 'forestplot', 'zCompositions', 'fossil', 'picante',
-                    'entropart', 'lme4', 'lmerTest', 'robCompositions', 'GUniFrac', 'ecodist', 'gridExtra', 'ggplot2', 'patchwork',                               'ggthemes', 'DiagrammeR', 'stringr','devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP',                     'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'MiRKAT', 'BiocParallel', 'phyloseq',                               'biomformat', 'LDM', 'volcano3D'
+Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'google Vis', 'gridExtra', 'gridGraphics', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantret', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
 
 License: GPL (≥ 2)
+
 ## URLs
 
 * Web application (online implementation): http://223.194.200.100:3838
