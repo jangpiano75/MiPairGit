@@ -4,7 +4,8 @@ list.of.packages <- c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse'
                       'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
                       'entropart', 'lme4', 'lmerTest', 'robCompositions', 
                       'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr',
-                      'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'DESeq2')
+                      'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'DESeq2')
+
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
