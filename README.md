@@ -33,7 +33,6 @@ License: GPL (≥ 2)
 
 # Prerequites
 
-shiny
 ```
 install.packages("shiny")
 ```
