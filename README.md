@@ -24,7 +24,7 @@ License: GPL (≥ 2)
 
 ## URLs
 
-* Web application (online implementation): http://223.194.200.100:3838
+* Web application (online implementation): http://mipair.micloud.kr
 * GitHub repository (local implementation): https://github.com/yj7599/MiPairGit
 
 ## References
@@ -44,6 +44,14 @@ library(shiny)
 
 runGitHub("MiPairGit", "yj7599", ref = "main")
 ```
+
+# Maximum Local Implementation Time for Installing Default Packages 
+
+| Flavor | time | Status | 
+| ------------- | ------------- |
+| macos-arm64 | 9m 07s | Ok | 
+| windows  | Content Cell  | Ok | 
+| linux  | Content Cell  | Ok | 
 
 # Troubleshooting Tips
 
