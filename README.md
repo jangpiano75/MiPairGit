@@ -23,7 +23,7 @@ Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', '
 License: GPL (≥ 2)
 
 
-Maximum Local Implementation Time for Installing Default Packages 
+Maximum Time for Installing Default Packages 
 
 | Flavor | time | Status | 
 | ------------- | ------------- | -----|
