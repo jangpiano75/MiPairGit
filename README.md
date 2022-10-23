@@ -18,7 +18,7 @@ Description: MiPair is an integrative web cloud service for design-based compara
 
 NeedsCompilation: No
 
-Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'google Vis', 'gridExtra', 'gridGraphics', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantret', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
+Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'google Vis', 'gridExtra', 'gridGraphics', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantret', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
 
 License: GPL (≥ 2)
 
