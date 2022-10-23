@@ -22,6 +22,14 @@ Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', '
 
 License: GPL (≥ 2)
 
+Maximum Local Implementation Time for Installing Default Packages 
+
+| Flavor | time | Status | 
+| ------------- | ------------- | -----|
+| macos-arm64 | 9m 07s | Ok | 
+| windows  | Content Cell  | Ok | 
+| linux  | Content Cell  | Ok | 
+
 ## URLs
 
 * Web application (online implementation): http://mipair.micloud.kr
@@ -44,14 +52,6 @@ library(shiny)
 
 runGitHub("MiPairGit", "yj7599", ref = "main")
 ```
-
-# Maximum Local Implementation Time for Installing Default Packages 
-
-| Flavor | time | Status | 
-| ------------- | ------------- |
-| macos-arm64 | 9m 07s | Ok | 
-| windows  | Content Cell  | Ok | 
-| linux  | Content Cell  | Ok | 
 
 # Troubleshooting Tips
 
