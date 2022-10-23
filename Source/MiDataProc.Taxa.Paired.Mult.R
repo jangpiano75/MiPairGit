@@ -1265,31 +1265,31 @@ make_tripe_pvalues <- function(global_test, pairwise_result, taxa_mani, species 
 }
 
 volcano_visualize_individual <- function(volcano_dat_fin, species){
-  fig_list <- list() 
-  annotation_list <- list() 
+  fig_list <- list()
+  annotation_list <- list()
   title_vec <- names(volcano_dat_fin)
-  
+
   q_val_list <- lapply(volcano_dat_fin, "[", , "Adj.P.value")
-  ylim <- min(as.numeric(sapply(q_val_list, function(x)min(na.omit(x))))) 
+  ylim <- min(as.numeric(sapply(q_val_list, function(x)min(na.omit(x)))))
   ylim_val <- ceiling(-log10(ylim + 0.0001)) + 1
-  
+
   volcano_dat_fin[[1]]$rank <- factor(volcano_dat_fin[[1]]$rank, levels = c("Phylum", "Class", "Order", "Family", "Genus", "Species"))
   volcano_dat_fin[[1]]$global_sig <- factor(volcano_dat_fin[[1]]$global_sig, levels = c("glob: sig", "glob: non-sig"))
-  
+
   x_lim_1 <- max(max(na.omit(as.numeric(volcano_dat_fin[[1]]$logFC))), abs(min(na.omit(as.numeric(volcano_dat_fin[[1]]$logFC)))))
-    
-  fig_list[[1]] <- plot_ly(data = volcano_dat_fin[[1]]) %>% add_trace(data = volcano_dat_fin[[1]][volcano_dat_fin[[1]]$global_sig == "glob: non-sig",], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbols = 4, color = ~rank, type = "scatter",  mode = "markers", text = ~paste("logFC:", as.numeric(logFC), "<br>Adj. P.value:", as.numeric(Adj.P.value) , "<br>", rank, ":", name), hoverinfo = 'text') %>% add_trace(data = volcano_dat_fin[[1]][volcano_dat_fin[[1]]$global_sig == "glob: sig",], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbol = factor("glob: sig", levels = c("glob: sig", "glob: non-sig")), symbols = 27, color = ~rank, type = "scatter",  mode = "markers", text = ~paste("logFC:", as.numeric(logFC), "<br>Adj. P.value:", as.numeric(Adj.P.value) , "<br>", rank, ":", name), hoverinfo = 'text', showlegend = FALSE)  %>% layout(xaxis = list(title = title_vec[1], ticktext = list("log<sub>2</sub>FC"), tickvals = list(0)), yaxis = list(title =  list(text = "-log<sub>10</sub>Q", font = list(size = 13))), plot_bgcolor = "#FFFFFF", shapes = list(list(type = "rect", fillcolor = "Blue", line = list(color = "Blue"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = - x_lim_1 - 1, x1= -2), list(type = "rect", fillcolor = "red", line = list(color = "red"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = 2, x1 = x_lim_1 + 1)), showgrid = FALSE) 
-  
+
+  fig_list[[1]] <- plot_ly(data = volcano_dat_fin[[1]]) %>% add_trace(data = volcano_dat_fin[[1]][volcano_dat_fin[[1]]$global_sig == "glob: non-sig",], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbols = 'cross', colors = "Set1", color = ~rank, type = "scatter",  mode = "markers", marker = list(size=7.5), text = ~paste("<b>logFC:</b>", as.numeric(logFC), "<b><br>Adj. P.value:</b>", as.numeric(Adj.P.value) , "<br>", rank, ":", name), hoverinfo = 'text') %>% add_trace(data = volcano_dat_fin[[1]][volcano_dat_fin[[1]]$global_sig == "glob: sig",], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbol = factor("glob: sig", levels = c("glob: sig", "glob: non-sig")), symbols = 27, colors = "Set1", color = ~rank, type = "scatter",  mode = "markers", marker = list(size = 7.5), text = ~paste("<b>logFC:</b>", as.numeric(logFC), "<b><br>Adj. P.value:</b>", as.numeric(Adj.P.value) , "<br>", rank, ":", name), hoverinfo = 'text', showlegend = FALSE)  %>% layout(xaxis = list(title = paste0("<b>", title_vec[1], "</b>"), ticktext = list("<b>log<sub>2</sub>FC</b>"), tickvals = list(0)), yaxis = list(title =  list(text = "<b>-log<sub>10</sub>Q</b>", font = list(size = 13))), plot_bgcolor = "#FFFFFF", shapes = list(list(type = "rect", fillcolor = "Blue", line = list(color = "Blue"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = - x_lim_1 - 1, x1= -2), list(type = "rect", fillcolor = "red", line = list(color = "red"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = 2, x1 = x_lim_1 + 1)), showgrid = FALSE)
+
   for (i in 2:(length(volcano_dat_fin))){
     volcano_dat_fin[[i]]$rank <- factor(volcano_dat_fin[[i]]$rank, levels = c("Phylum", "Class", "Order", "Family", "Genus", "Species"))
     volcano_dat_fin[[i]]$global_sig <- factor(volcano_dat_fin[[i]]$global_sig, levels = c("glob: sig", "glob: non-sig"))
     x_lim <- max(max(na.omit(as.numeric(volcano_dat_fin[[i]]$logFC))), abs(min(na.omit(as.numeric(volcano_dat_fin[[i]]$logFC)))))
-    fig_list[[i]] <- plot_ly(volcano_dat_fin[[i]], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbol = ~ global_sig, symbols = c(4, 27), color = ~rank,  type = "scatter",  mode = "markers", text = ~paste("logFC:", as.numeric(logFC), "<br>Adj. P.value:", as.numeric(Adj.P.value) , "<br>", rank, ":", name), showlegend = FALSE, hoverinfo = 'text') %>% layout(xaxis = list(title = title_vec[i], ticktext = list("log<sub>2</sub>FC"), tickvals = list(0)), yaxis = list(title =  "-log<sub>10</sub>Q", font = list(size = 3)), plot_bgcolor = "#FFFFFF", shapes = list(list(type = "rect", fillcolor = "Blue",line = list(color = "Blue"), opacity = 0, y0 = 1.301029996, y1 = ylim_val,  x0 = -x_lim-1, x1= -2), list(type = "rect", fillcolor = "red", line = list(color = "red"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = 2, x1 = x_lim + 1)))
+    fig_list[[i]] <- plot_ly(volcano_dat_fin[[i]], x = ~as.numeric(logFC), y = ~-log10(as.numeric(Adj.P.value) + 0.0001), symbol = ~ global_sig, symbols = c('cross', 27), colors = "Set1", color = ~rank,  type = "scatter",  mode = "markers", marker = list(size=7.5), text = ~paste("<b>logFC:</b>", as.numeric(logFC), "<b><br>Adj. P.value:</b>", as.numeric(Adj.P.value) , "<br>", rank, ":", name), showlegend = FALSE, hoverinfo = 'text') %>% layout(xaxis = list(title = paste0("<b>", title_vec[i], "</b>"), ticktext = list("<b>log<sub>2</sub>FC</b>"), tickvals = list(0)), yaxis = list(title =  "-log<sub>10</sub>Q", font = list(size = 3)), plot_bgcolor = "#FFFFFF", shapes = list(list(type = "rect", fillcolor = "Blue",line = list(color = "Blue"), opacity = 0, y0 = 1.301029996, y1 = ylim_val,  x0 = -x_lim-1, x1= -2), list(type = "rect", fillcolor = "red", line = list(color = "red"), opacity = 0, y0 = 1.301029996, y1 = ylim_val, x0 = 2, x1 = x_lim + 1)))
   }
-  
+
   number_row <- ceiling(length(volcano_dat_fin)/3)
-  
-  fig <- subplot(fig_list,titleX = TRUE, shareY = TRUE, nrows = number_row,  margin = c(0.02, 0.02, 0.02, 0.07)) %>% layout(showlegend = TRUE) 
+
+  fig <- subplot(fig_list,titleX = TRUE, shareY = TRUE, nrows = number_row,  margin = c(0.02, 0.02, 0.02, 0.07)) %>% layout(showlegend = TRUE)
   fig
 }
 
