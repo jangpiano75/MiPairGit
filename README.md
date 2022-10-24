@@ -18,7 +18,7 @@ NeedsCompilation: No
 
 Depends: R(≥ 4.1.0)
 
-Imports: 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
+Imports: 'betareg', 'BiasedUrn', 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'CompQuadForm',  'dashboardthemes', 'devtools', 'DiagrammeR', 'dirmult', 'dplyr', 'DT', 'ecodist', 'entropart', 'erer', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'gridExtra', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'rmarkdown', 'robCompositions', 'robustbase', 'seqinr', 'shiny', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
 
 License: GPL 1, GPL 2 (GPL ≥ 2)
 
