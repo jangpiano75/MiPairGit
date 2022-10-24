@@ -2,10 +2,10 @@ rm(list = ls())
 
 install.packages("deSolve", type = "binary") 
 
-list.of.packages <- c('seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable', 
+list.of.packages <- c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable', 
                       'DT', 'htmltools', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
-                      'entropart', 'lme4', 'lmerTest', 'robCompositions', 
-                      'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr',
+                      'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'erer', 'BiasedUrn', 'CompQuadForm', 'robCompositions', 
+                      'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr', 'betareg', 
                       'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'DESeq2')
 
 
