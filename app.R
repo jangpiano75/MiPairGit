@@ -1,7 +1,5 @@
 rm(list = ls())
 
-install.packages("deSolve", type = "binary") 
-
 list.of.packages <- c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboardthemes', 'tidyverse', 'plotly', 'shinyWidgets', 'shinyjs', 'googleVis', 'xtable', 
                       'DT', 'htmltools', 'biomformat', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
                       'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'erer', 'BiasedUrn', 'CompQuadForm', 'robCompositions', 
