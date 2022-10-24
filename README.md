@@ -14,22 +14,13 @@ Description: MiPair is an integrative web cloud service for design-based compara
 * Parametric or non-parametric tests for incomplete or complete block designs
 * Both ecological (alpha- and beta-diversity) and taxonomic (e.g., phylum, class, order, family, genus, species) analysis
 
-![workflow_git](https://user-images.githubusercontent.com/109124970/188030505-b6dcb1ad-a4bb-47ab-a9c5-75deb96e556a.png)
-
 NeedsCompilation: No
 
-Depends: R(>= 4.1.0), 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'google Vis', 'gridExtra', 'gridGraphics', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantret', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
+Depends: R(≥ 4.1.0)
 
-License: GPL (≥ 2)
+Imports: 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'dashboardthemes', 'DESeq2', 'devtools', 'DiagrammeR', 'dplyr', 'DT', 'ecodist', 'entropart', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'robCompositions', 'seqinr', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
 
-
-Maximum Time for Installing Default Packages 
-
-| Flavor | time | Status | 
-| ------------- | ------------- | -----|
-| macos-arm64 | 9m 07s | Ok | 
-| windows  | Content Cell  | Ok | 
-| linux  | Content Cell  | Ok | 
+License: GPL 1, GPL 2 (GPL ≥ 2)
 
 ## URLs
 
@@ -56,4 +47,4 @@ runGitHub("MiPairGit", "yj7599", ref = "main")
 
 # Troubleshooting Tips
 
-If you have any problems for using MiPair, please report in Issues (https://github.com/yj7599/MiPair/issues) or email Hyo Jung Jang (hyojung.jang@stonybrook.edu).
+If you have any problems for using MiPair, please report in Issues (https://github.com/yj7599/MiPairGit/issues) or email Hyo Jung Jang (hyojung.jang@stonybrook.edu).
