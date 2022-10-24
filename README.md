@@ -40,10 +40,10 @@ install.packages('shiny')
 ```
 BiocManager
 ```
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
+if (!require('BiocManager', quietly = TRUE))
+    install.packages('BiocManager')
     
-BiocManager::install(version = "3.14")
+BiocManager::install(version = '3.14')
 ```
 CRAN
 ```
