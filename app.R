@@ -19,6 +19,7 @@ if(!require('biomformat')) remotes::install_github('joey711/biomformat')
 if(!require('LDM')) install.packages("Package/LDM_5.0.tar.gz", repos = NULL)
 if(!require('volcano3D')) remotes::install_github("KatrionaGoldmann/volcano3D")
 
+library(deSolve)
 library(rmarkdown) 
 library(seqinr)
 library(shinydashboard)
