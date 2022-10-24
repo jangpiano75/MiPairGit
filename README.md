@@ -42,6 +42,7 @@ BiocManager
 ```
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
+    
 BiocManager::install(version = "3.14")
 ```
 CRAN
@@ -61,6 +62,7 @@ BiocManager::install(bio.pkgs)
 GitHub
 ```
 library(devtools)
+
 remotes::install_github("KatrionaGoldmann/volcano3D")
 ```
 
