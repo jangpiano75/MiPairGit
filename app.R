@@ -3938,12 +3938,11 @@ server = function(input, output, session) {
             }
           }
           
-          
           num <- 5 + include
           nrow = numeric()
+          
           for (r in 1:num) {
-            print(r)
-            row.num <- ceiling(sum(taxa.ldm.test.q.out[[r]]$P.value[as.numeric(taxa.ldm.test.q.out[[r]]$P.value)] < 0.05)/4) 
+            row.num <- ceiling(sum(taxa.ldm.test.q.out[[r]]$Adj.P.value < 0.05)/4) 
             if (row.num > 0) {
               nrow[r] <- row.num
             } else {
