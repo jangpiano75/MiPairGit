@@ -3280,7 +3280,7 @@ server = function(input, output, session) {
               
               taxa.ldm.test.est.added <- taxa.wilcox.test.est.func(taxa.results$bin.var, re_tax, rename.cats_ref, rename.cats_com, taxa.ldm.test.q.out)
               
-              taxa.outputs$DAoutput <- taxa.ldm.test.est.edded
+              taxa.outputs$DAoutput <- taxa.ldm.test.est.added
               
             }else{
               set.seed(521)
