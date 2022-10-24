@@ -18,7 +18,7 @@ NeedsCompilation: No
 
 Depends: R(≥ 4.1.0)
 
-Imports: 'betareg', 'BiasedUrn', 'BiocManager', 'BiocParallel', 'biomformat', 'bios2mds', 'CompQuadForm',  'dashboardthemes', 'devtools', 'DiagrammeR', 'dirmult', 'dplyr', 'DT', 'ecodist', 'entropart', 'erer', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'gridExtra', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'LDM', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'phyloseq', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'rmarkdown', 'robCompositions', 'robustbase', 'seqinr', 'shiny', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'volcano3D', 'xtable', 'zCompositions', 'zip'
+Imports: Bioconductor ('BiocParallel', 'biomformat', 'phyloseq'); CRAN ('betareg', 'BiasedUrn', 'BiocManager', 'bios2mds', 'CompQuadForm', 'dashboardthemes', 'devtools', 'DiagrammeR', 'dirmult', 'dplyr', 'DT', 'ecodist', 'entropart', 'erer', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'gridExtra', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'rmarkdown', 'robCompositions', 'robustbase', 'seqinr', 'shiny', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'xtable', 'zCompositions', 'zip'); GitHub ('LDM', "volcano3D")
 
 License: GPL 1, GPL 2 (GPL ≥ 2)
 
@@ -31,10 +31,36 @@ License: GPL 1, GPL 2 (GPL ≥ 2)
 
 * Jang HJ, Koh H, Gu W, Kang B. MiPair: An integrative web cloud service for design-based comparative analysis with paired microbiome data (*_Submitted_*)
 
-# Prerequites
+## Prerequites
 
+shiny
 ```
-install.packages("shiny")
+install.packages('shiny')
+```
+BiocManager
+```
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(version = "3.14")
+```
+CRAN
+```
+cran.pkgs <- c('betareg', 'BiasedUrn', 'BiocManager', 'bios2mds', 'CompQuadForm', 'dashboardthemes', 'devtools', 'DiagrammeR', 'dirmult', 'dplyr', 'DT', 'ecodist', 'entropart', 'erer', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'gridExtra', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'rmarkdown', 'robCompositions', 'robustbase', 'seqinr', 'shiny', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'xtable', 'zCompositions', 'zip')
+
+install.packages(cran.pkgs)
+```
+Bioconductor
+```
+library(BiocManager)
+
+bio.pkgs <- c('BiocParallel', 'biomformat', 'phyloseq')
+
+BiocManager::install(bio.pkgs)
+```
+GitHub
+```
+library(devtools)
+remotes::install_github("KatrionaGoldmann/volcano3D")
 ```
 
 # Launch App
@@ -47,4 +73,7 @@ runGitHub("MiPairGit", "yj7599", ref = "main")
 
 # Troubleshooting Tips
 
-If you have any problems for using MiPair, please report in Issues (https://github.com/yj7599/MiPairGit/issues) or email Hyo Jung Jang (hyojung.jang@stonybrook.edu).
+If you have any problems for using MiPair, please report in Issues (https://github.com/YJ7599/MiPairGit/issues) or email Hyo Jung Jang (hyojung.jang@stonybrook.edu).
+
+* Tip 1. For the local implementation, depending on your pre-installed R libraries, your may need to some additional R packages. 
+* Tip 2. For the local implementation, please make sure if you have the most recent package version for the local implementation
