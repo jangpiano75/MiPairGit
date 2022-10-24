@@ -4,7 +4,7 @@ list.of.packages <- c('shiny', 'rmarkdown', 'seqinr', 'shinydashboard', 'dashboa
                       'DT', 'htmltools', 'biomformat', 'phangorn', 'bios2mds', 'zip', 'zCompositions', 'dplyr', 'forestplot', 'quantreg', 'fossil', 'picante',
                       'entropart', 'lme4', 'lmerTest', 'dirmult', 'robustbase', 'erer', 'BiasedUrn', 'CompQuadForm', 'robCompositions', 
                       'GUniFrac', 'ecodist', 'MiRKAT', 'gridExtra', 'ggplot2', 'patchwork', 'ggthemes', 'DiagrammeR', 'stringr', 'betareg', 
-                      'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac', 'DESeq2')
+                      'devtools', 'reticulate', 'nlme', 'remotes', 'gridGraphics', 'compositions', 'ICSNP', 'xtable', 'rgl', 'BiocManager', 'PMCMRplus', 'vegan', 'lme4', 'GUniFrac')
 
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -69,7 +69,6 @@ library(ICSNP)
 library(gridGraphics)
 library(compositions)
 library(xtable)
-library(DESeq2) 
 library(rgl)
 library(BiocParallel)    
 library(PMCMRplus)
