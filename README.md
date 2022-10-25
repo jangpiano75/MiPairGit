@@ -1,6 +1,6 @@
 # MiPair
 
-Title: MiPair: An Integrative Web Cloud Service for Design-based Comparative Analysis with Paired Microbiome Data
+Title: Integrative Web Cloud Computing and Analytics Using MiPair for Design-based Comparative Analysis with Paired Microbiome Data
 
 Version: 1.0.0
 
@@ -29,8 +29,7 @@ License: GPL 1, GPL 2 (GPL ≥ 2)
 
 ## References
 
-* Jang HJ, Koh H, Gu W, Kang B. Interactive web cloud computing and analytics using MiPair for design-based comparative analysis with paired microbiome data (*_in revision_*). 
-
+* Jang HJ, Koh H, Gu W, Kang B.  Integrative Web Cloud Computing and Analytics Using MiPair for Design-based Comparative Analysis with Paired Microbiome Data (*_in revision_*). 
 
 ## Prerequites
 
