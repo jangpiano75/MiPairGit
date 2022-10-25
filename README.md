@@ -33,6 +33,8 @@ License: GPL 1, GPL 2 (GPL ≥ 2)
 
 ## Prerequites
 
+### Notice: For the local implementation, you do not need to install all the pre-requite R packages individually. You only need to install the 'shiny' package, and then run a simple command in 'Launch App' below. Then, all the pre-requisite R packages will be automatically installed and imported. 
+
 shiny
 ```
 install.packages('shiny')
@@ -73,9 +75,8 @@ library(shiny)
 runGitHub('MiPairGit', 'yj7599', ref = 'main')
 ```
 
-# Troubleshooting Tips
+## Troubleshooting Tips
 
 If you have any problems for using MiPair, please report in Issues (https://github.com/YJ7599/MiPairGit/issues) or email Hyo Jung Jang (hyojung.jang@stonybrook.edu).
 
-* Tip 1. For the local implementation, depending on your pre-installed R libraries, your may need to some additional R packages. 
-* Tip 2. For the local implementation, please make sure if you have the most recent package version for the local implementation
+* Tip 1. For the local implementation, to ensure no fail builds, you may need to remove all the pre-installed R packages on your computer or start it all over again after re-installing R and R Studio completely.
