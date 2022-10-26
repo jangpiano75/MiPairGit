@@ -33,38 +33,11 @@ License: GPL 1, GPL 2 (GPL ≥ 2)
 
 ## Prerequites
 
-### Notice: For the local implementation, you do not need to install all the pre-requite R packages individually. You only need to install the 'shiny' package, and then run a simple command in 'Launch App' below. Then, all the pre-requisite R packages will be automatically installed and imported. 
+#### Notice: For the local implementation, you do not need to install all the pre-requite R packages individually. You only need to install the 'shiny' package, and then run a simple command in 'Launch App' below. Then, all the pre-requisite R packages will be installed and imported automatically. 
 
 shiny
 ```
 install.packages('shiny')
-```
-BiocManager
-```
-if (!require('BiocManager', quietly = TRUE))
-    install.packages('BiocManager')
-    
-BiocManager::install(version = '3.14')
-```
-CRAN
-```
-cran.pkgs <- c('betareg', 'BiasedUrn', 'BiocManager', 'bios2mds', 'CompQuadForm', 'dashboardthemes', 'devtools', 'DiagrammeR', 'dirmult', 'dplyr', 'DT', 'ecodist', 'entropart', 'erer', 'fBasics', 'forestplot', 'fossil', 'ggplot2', 'ggthemes', 'googleVis', 'gridExtra', 'gridGraphics', 'gridExtra', 'compositions', 'GUniFrac', 'htmltools', 'ICSNP', 'lme4', 'lmerTest', 'MiRKAT', 'nlme', 'patchwork', 'phangorn', 'picante', 'plotly', 'PMCMRplus', 'quantreg', 'remotes', 'reticulate', 'rgl', 'rmarkdown', 'robCompositions', 'robustbase', 'seqinr', 'shiny', 'shinydashboard', 'shinyjs', 'shinyWidgets', 'stringr', 'tidyverse', 'vegan', 'xtable', 'zCompositions', 'zip')
-
-install.packages(cran.pkgs)
-```
-Bioconductor
-```
-library(BiocManager)
-
-bio.pkgs <- c('BiocParallel', 'biomformat', 'phyloseq')
-
-BiocManager::install(bio.pkgs)
-```
-GitHub
-```
-library(devtools)
-
-remotes::install_github('KatrionaGoldmann/volcano3D')
 ```
 
 # Launch App
