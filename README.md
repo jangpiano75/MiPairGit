@@ -40,7 +40,7 @@ shiny
 install.packages('shiny')
 ```
 
-# Launch App
+## Launch App
 
 ```
 library(shiny)
