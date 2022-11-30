@@ -17,13 +17,13 @@ REFERENCE_CHECK_P <- function(data_transform = "", method_name = "", FDR = ""){
     reference_lists = c(reference_lists, "Tukey, John. Comparing Individual Means in the Analysis of Variance. Biometrics. 1949;5(2):99-114.", "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol. 1995;57(1):289-300.")
   }
   else if(method_name == "Friedman's test (global) with Conover's test (pairwise)" | method_name == "Friedman's test (global) with Conover's test (pairwise)(default)"){
-    reference_lists = c(reference_lists, "Friedman M. A comparison of alternative tests of significance for the problem of m rankings. The Annals of Mathematical Statistics. 1940;11(1):86-92.", "Conover WJ. (1999). Pratical Nonparametric Statistics. 3rd ed. New York: John Wiley & SonsAnderson MJ. A new method for non-parametric multivariate analysis of variance. Austral Ecol. 2001;26(1):32-46.",
+    reference_lists = c(reference_lists, "Friedman M. A comparison of alternative tests of significance for the problem of m rankings. The Annals of Mathematical Statistics. 1940;11(1):86-92.", "Conover, W.J. (1999). Pratical Nonparametric Statistics, 3rd ed. 428-433 (Wiley, 1999)",
                         "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol. 1995;57(1):289-300.")
   }
   
   else if(method_name == "Durbin's test (global) with Conover's test (pairwise)(default)" | method_name == "Durbin's test (global) with Conover's test (pairwise)"){
     reference_lists = c(reference_lists, 
-                        "Conover WJ. (1999). Pratical Nonparametric Statistics. 3rd ed. New York: John Wiley & Sons Anderson MJ. A new method for non-parametric multivariate analysis of variance. Austral Ecol. 2001;26(1):32-46.",
+                        "Conover, W.J. (1999). Pratical Nonparametric Statistics, 3rd ed. 428-433 (Wiley, 1999)",
                         "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Stat Soc Series B Stat Methodol. 1995;57(1):289-300.")
   }
   
