@@ -29,7 +29,7 @@ License: GPL 1, GPL 2
 
 ## References
 
-* Jang HJ, Koh H, Gu W, Kang B.  Integrative Web Cloud Computing and Analytics Using MiPair for Design-based Comparative Analysis with Paired Microbiome Data (*_in revision_*). 
+* Jang H, Koh H, Gu W, Kang B. (2022) Integrative web cloud computing and analytics using MiPair for design-based comparative analysis with paired microbiome data. Scientific Reports. 12:20465 https://doi.org/10.1038/s41598-022-25093-6.
 
 ## Prerequites
 
